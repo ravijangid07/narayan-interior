@@ -1,0 +1,366 @@
+<!-- =========================
+     CLIENTS SECTION
+========================= -->
+
+<style>
+  .clients-section {
+    width: 100%;
+    padding: 120px 0;
+    background: #f7f7f5;
+    color: #111;
+  }
+
+  .clients-section .section-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+  }
+
+  /* INTRO */
+  .clients-section .section-intro {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .clients-section .section-number {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #777;
+  }
+
+  .clients-section .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #777;
+  }
+
+  .clients-section .section-intro::after {
+    content: "";
+    width: 55px;
+    height: 1px;
+    background: #aaa;
+  }
+
+  /* HEADING */
+  .clients-heading {
+    max-width: 850px;
+  }
+
+  .clients-heading h2 {
+    margin: 0;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 0.98;
+    font-weight: 500;
+    letter-spacing: -3px;
+  }
+
+  .clients-heading h2 em {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    color: #777;
+  }
+
+  .clients-heading p {
+    max-width: 600px;
+    margin: 30px 0 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+  }
+
+  /* LOGO GRID */
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 75px;
+    border-top: 1px solid #d8d8d5;
+    border-left: 1px solid #d8d8d5;
+  }
+
+  .client-logo {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 50px;
+    background: #f7f7f5;
+    border-right: 1px solid #d8d8d5;
+    border-bottom: 1px solid #d8d8d5;
+    overflow: hidden;
+    transition: background 0.35s ease;
+  }
+
+  .client-logo img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 190px;
+    max-height: 95px;
+    object-fit: contain;
+
+    /* Premium default look */
+    filter: grayscale(100%);
+    opacity: 0.62;
+
+    transition:
+      filter 0.4s ease,
+      opacity 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  .client-logo:hover {
+    background: #ffffff;
+  }
+
+  .client-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.07);
+  }
+
+  /* Individual logo sizing */
+  .client-logo.akshar img {
+    max-width: 190px;
+    max-height: 115px;
+  }
+
+  .client-logo.bhagwati img {
+    max-width: 175px;
+    max-height: 100px;
+  }
+
+  .client-logo.city-infra img {
+    max-width: 175px;
+    max-height: 105px;
+  }
+
+  .client-logo.jsw img {
+    max-width: 210px;
+    max-height: 90px;
+  }
+
+  .client-logo.godrej img {
+    max-width: 175px;
+    max-height: 105px;
+  }
+
+  .client-logo.vtp img {
+    max-width: 175px;
+    max-height: 105px;
+  }
+
+  /* NOTE */
+  .clients-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 55px;
+  }
+
+  .clients-note::before,
+  .clients-note::after {
+    content: "";
+    width: 45px;
+    height: 1px;
+    background: #bbb;
+  }
+
+  .clients-note span {
+    margin: 0 18px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #888;
+  }
+
+  /* TABLET */
+  @media (max-width: 900px) {
+    .clients-section {
+      padding: 90px 0;
+    }
+
+    .clients-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 55px;
+    }
+
+    .client-logo {
+      height: 170px;
+    }
+
+    .clients-heading h2 {
+      letter-spacing: -2px;
+    }
+  }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    .clients-section {
+      padding: 75px 0;
+    }
+
+    .clients-section .section-container {
+      width: 88%;
+    }
+
+    .clients-section .section-intro {
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .clients-section .section-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .clients-heading h2 {
+      font-size: 43px;
+      letter-spacing: -1.8px;
+    }
+
+    .clients-heading p {
+      margin-top: 22px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .clients-grid {
+      grid-template-columns: 1fr;
+      margin-top: 45px;
+    }
+
+    .client-logo {
+      height: 155px;
+      padding: 30px;
+    }
+
+    .client-logo img {
+      max-width: 170px;
+      max-height: 85px;
+    }
+
+    .client-logo.akshar img {
+      max-width: 180px;
+      max-height: 100px;
+    }
+
+    .client-logo.jsw img {
+      max-width: 190px;
+    }
+
+    .clients-note {
+      margin-top: 40px;
+    }
+
+    .clients-note span {
+      font-size: 8px;
+      letter-spacing: 2px;
+      margin: 0 12px;
+      text-align: center;
+    }
+
+    .clients-note::before,
+    .clients-note::after {
+      width: 25px;
+    }
+  }
+</style>
+
+
+<section class="clients-section" id="clients">
+
+  <div class="section-container">
+
+    <!-- SECTION INTRO -->
+    <div class="section-intro">
+      <span class="section-number">06</span>
+      <span class="section-label">VALUED CLIENTS</span>
+    </div>
+
+
+    <!-- HEADING -->
+    <div class="clients-heading">
+
+      <h2>
+        Trusted by
+        <em>leading names.</em>
+      </h2>
+
+      <p>
+        We build professional relationships through dependable
+        coordination, quality execution and consistent project delivery.
+      </p>
+
+    </div>
+
+
+    <!-- CLIENT LOGOS -->
+    <div class="clients-grid">
+
+      <!-- AKSHAR -->
+      <div class="client-logo akshar">
+        <img
+          src="assets/client-akshar.png"
+          alt="Akshar Group"
+        >
+      </div>
+
+
+      <!-- BHAGWATI -->
+      <div class="client-logo bhagwati">
+        <img
+          src="assets/client-bhagwati.png"
+          alt="Bhagwati"
+        >
+      </div>
+
+
+      <!-- CITY INFRA -->
+      <div class="client-logo city-infra">
+        <img
+          src="assets/client-city-infra.jpg"
+          alt="City Infra"
+        >
+      </div>
+
+
+      <!-- JSW -->
+      <div class="client-logo jsw">
+        <img
+          src="assets/client-jsw.webp"
+          alt="JSW"
+        >
+      </div>
+
+
+      <!-- GODREJ -->
+      <div class="client-logo godrej">
+        <img
+          src="assets/client-godrej-properties.jpg"
+          alt="Godrej Properties"
+        >
+      </div>
+
+
+      <!-- VTP REALTY -->
+      <div class="client-logo vtp">
+        <img
+          src="assets/client-vtp-realty.jpg"
+          alt="VTP Realty"
+        >
+      </div>
+
+    </div>
+
+
+    <!-- BOTTOM NOTE -->
+    <div class="clients-note">
+      <span>AND OTHER PRESTIGIOUS CLIENTS</span>
+    </div>
+
+  </div>
+
+</section>
